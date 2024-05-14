@@ -1,0 +1,15 @@
+# Callback URL verify 
+
+curl -X GET "http://localhost:5000/wxauth?msg_signature=012bc692d0a58dd4b10f8dfe5c4ac00ae211ebeb&timestamp=1476416373&nonce=47744683&echostr=fsi1xnbH4yQh0%2BPJxcOdhhK6TDXkjMyhEPA7xB2TGz6b%2Bg7xyAbEkRxN%2F3cNXW9qdqjnoVzEtpbhnFyq6SVHyA%3D%3D"
+
+
+# User message decryption. 
+
+
+curl -X POST "http://localhost:5000/wxauth?msg_signature=0c3914025cb4b4d68103f6bfc8db550f79dcf48e&timestamp=1476422779&nonce=1597212914" \
+  -H "Content-Type: application/xml" \
+  -d '<xml>
+        <ToUserName><![CDATA[ww1436e0e65a779aee]]></ToUserName>
+        <Encrypt><![CDATA[Kl7kjoSf6DMD1zh7rtrHjFaDapSCkaOnwu3bqLc5tAybhhMl9pFeK8NslNPVdMwmBQTNoW4mY7AIjeLvEl3NyeTkAgGzBhzTtRLNshw2AEew+kkYcD+Fq72Kt00fT0WnN87hGrW8SqGc+NcT3mu87Ha3dz1pSDi6GaUA6A0sqfde0VJPQbZ9U+3JWcoD4Z5jaU0y9GSh010wsHF8KZD24YhmZH4ch4Ka7ilEbjbfvhKkNL65HHL0J6EYJIZUC2pFrdkJ7MhmEbU2qARR4iQHE7wy24qy0cRX3Mfp6iELcDNfSsPGjUQVDGxQDCWjayJOpcwocugux082f49HKYg84EpHSGXAyh+/oxwaWbvL6aSDPOYuPDGOCI8jmnKiypE+]]></Encrypt>
+        <AgentID><![CDATA[1000002]]></AgentID>
+      </xml>'
